@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CRUDS.css">
+    <title>CRUDS</title>
+</head>
+
+<body>
+    <div class="crud">
+        <div class="head">
+            <h2>moataz fone</h2>
+            <p>for all accessories and maintenance</p>
+        </div>
+
+
+        <!--============================ Start input=================== -->
+        <div class="inputs">
+            <input id="title" type="text" placeholder="title">
+            <div class="price">
+                <input onKeyup="getTotal()" id="price" type="number" placeholder="price">
+                <input onKeyup="getTotal()" id="taxes" type="number" placeholder="taxes">
+                <input onKeyup="getTotal()" id="ads" type="number" placeholder="ads">
+                <input onKeyup="getTotal()" id="discound" type="number" placeholder="discound">
+                <small id="total"></small>
+            </div>
+            <input id="count" type="number" placeholder="count">
+            <input id="category" type="text" placeholder="category">
+
+            <button id="submit">Create</button>
+
+        </div>
+        <!--============================ End input ====================== -->
+
+        <!--============================ Start outputs=================== -->
+        <div class="outputs">
+            <div class="searchBlock">
+                <input onkeyup=" searchData(this.value)" id="search" type="text" placeholder="search" >
+                <div class="btnSeatch">
+                    <button onclick="getSearchMood(this.id)" id="searchTiile">Seatch By Title</button>
+                    <button onclick="getSearchMood(this.id)" id="searchCategory">Seatch By Category</button>
+                </div>
+            </div>
+            <div id="deleteAll">
+
+            </div>
+            <table>
+                <tr>
+                    <th>id</th>
+                    <th>title</th>
+                    <th>price</th>
+                    <th>taxes</th>
+                    <th>ads</th>
+                    <th>discount</th>
+                    <th>total</th>
+                    <th>category</th>
+                    <th>update</th>
+                    <th>delet</th>
+                </tr>
+                <tbody id="tbody">
+                   
+                </tbody>
+            </table>
+        </div>
+        <!--============================ End outputs ==================== -->
+    </div>
+    <script src="CRUDS.js"></script>
+</body>
+
+</html>
